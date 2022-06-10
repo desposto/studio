@@ -55,7 +55,7 @@ export const presentBalanceFetcherResponse = (
   const nonZeroBalanceProducts = products
     .map(assetGroup => ({
       ...assetGroup,
-      assets: assetGroup.assets.filter(b => !!b).filter(b => Math.abs(b.balanceUSD) >= 0.01),
+      assets: assetGroup.assets.filter(b => !!b).filter(b => Math.abs(b.balanceUSD) >= 0.00000000001),
     }))
     .filter(assetGroup => assetGroup.assets.length > 0);
 
